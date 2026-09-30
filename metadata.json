@@ -1,0 +1,6 @@
+{
+  "name": "DIGILUTIONS / CREATIVE",
+  "description": "AI-powered creator-style video ads for brands that need fresh creative — without waiting for a shoot or creator. Same-day delivery from ₹2,499.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
