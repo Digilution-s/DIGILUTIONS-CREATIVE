@@ -168,6 +168,18 @@ export const AdPortfolio: React.FC<AdPortfolioProps> = ({ onOpenOrderModal, onSc
       const labels = ['0–3s Hook', '3–7s Problem', '7–13s Product Demo', '13–17s Key Benefit', '17–20s CTA'];
       return labels[idx] || `${activeAd.subtitles[idx].time}s`;
     }
+    if (adId === 'ad-apparel-heavyweight-tee') {
+      const labels = [
+        '0–4s Hook',
+        '4–9s Objection',
+        '9–17s Product / Fabric',
+        '17–20s UGC Reaction',
+        '20–23s Fabric Feel',
+        '23–25s Personal Proof',
+        '25–29s CTA'
+      ];
+      return labels[idx] || `${activeAd.subtitles[idx].time}s`;
+    }
     return `${activeAd.subtitles[idx].time}s`;
   };
 

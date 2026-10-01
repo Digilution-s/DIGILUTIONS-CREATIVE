@@ -75,26 +75,29 @@ export const VIDEO_ADS: VideoAdItem[] = [
   },
   {
     id: 'ad-apparel-heavyweight-tee',
-    title: 'DTC Apparel / 260GSM Structured Tee',
+    title: 'DTC Apparel / Oversized Matcha Tee — Final Master Script',
     niche: 'Fashion & Lifestyle',
     angle: 'objection-buster',
     angleLabel: 'Objection Buster',
-    hookHeadline: '“Can an oversized tee look tailored on shorter frames? Let’s check.”',
-    roasMetric: '4.1x ROAS',
-    ctrMetric: '3.6% Outbound CTR',
-    durationSeconds: 23,
+    hookHeadline: '“People always say oversized T-shirts look messy if you’re under 5\'8.”',
+    roasMetric: '4.7x ROAS',
+    ctrMetric: '3.8% Outbound CTR',
+    durationSeconds: 29,
     creatorName: 'Sneha & Dev',
     creatorRole: 'Style Creators · Pune',
+    videoUrl: '/videos/matcha-oversized-tee.mp4',
     subtitles: [
-      { time: 0, text: 'People always say oversized t-shirts look messy if you are under 5 foot 8.' },
-      { time: 5, text: 'The problem is cheap thin fabric that clings to your shoulders.' },
-      { time: 10, text: 'Notice the custom shoulder drop and ribbed 260 GSM combed cotton.' },
-      { time: 16, text: 'It holds its boxy structure all day even after 20 washing machine cycles.' },
-      { time: 20, text: 'Get 3 tees for ₹1,999 with free express shipping.' }
+      { time: 0, text: '“People always say oversized T-shirts look messy if you’re under 5\'8.”' },
+      { time: 4, text: '“But the problem isn’t your height, it’s cheap fabric that loses its shape and fit.”' },
+      { time: 9, text: '“This one is made with 100% combed cotton, biowashed and pre-shrunk for a clean, comfortable fit.”' },
+      { time: 17, text: '“So I’m obsessed with this oversized matcha tee.”' },
+      { time: 20, text: '“The cotton texture feels incredible on it. Falls so nicely.”' },
+      { time: 23, text: '“This is definitely my new favorite shirt.”' },
+      { time: 25, text: '“If you want that oversized look to actually sit right, this is worth trying.”' }
     ],
-    scriptSummary: 'Directly addresses consumer skepticism with side-by-side fit check and fabric weight macro zoom.',
-    bgGradient: 'from-[#221C1C] via-[#2A2323] to-[#171212]',
-    avatarColor: '#F5CBA7'
+    scriptSummary: '7-beat DTC apparel master script: directly counters the under-5\'8 oversized skepticism, proves 100% combed biowashed cotton quality, delivers authentic UGC fabric-feel reaction, and closes with a risk-free trial CTA.',
+    bgGradient: 'from-[#1A231A] via-[#243324] to-[#141C14]',
+    avatarColor: '#88B04B'
   },
   {
     id: 'ad-coffee-starter-pack',
