@@ -116,7 +116,9 @@ export const RazorpayModal: React.FC<RazorpayModalProps> = ({
               <div className="text-xs sm:text-sm font-bold flex items-center gap-1.5 text-white">
                 <span>{plan.name}</span>
                 <span className="text-[#888880]">·</span>
+                <span className="text-white/40 line-through text-[11px] tabular-nums">{plan.originalPriceFormatted}</span>
                 <span className="text-[#C7FF3D] font-mono">{plan.priceFormatted}</span>
+                <span className="text-[9px] bg-[#EDE9FE] text-[#6D28D9] px-1.5 py-0.2 rounded-full font-extrabold">50% off</span>
               </div>
             </div>
           </div>

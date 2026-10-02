@@ -13,11 +13,14 @@ export const MobileStickyBar: React.FC<MobileStickyBarProps> = ({ onOpenOrderMod
       style={{ paddingBottom: 'max(8px, env(safe-area-inset-bottom, 8px))' }}
     >
       <div className="flex flex-col justify-center pr-2">
-        <div className="text-[9px] font-mono text-[#C7FF3D] uppercase tracking-wider leading-tight flex items-center gap-1 font-bold">
+        <div className="text-[9px] font-mono text-[#C7FF3D] uppercase tracking-wider leading-tight flex items-center gap-1.5 font-bold">
           <span>THE 2-AD SPRINT</span>
+          <span className="text-[9px] text-[#6D28D9] bg-[#EDE9FE] px-1.5 py-0.2 rounded-full font-extrabold">50% off</span>
         </div>
-        <div className="text-xs xs:text-sm font-extrabold text-white leading-tight">
-          ₹2,499 <span className="text-[10px] font-normal text-white/70">· &lt;12h</span>
+        <div className="text-xs xs:text-sm font-extrabold text-white leading-tight flex items-center gap-1.5">
+          <span className="text-[11px] text-white/50 line-through tabular-nums">₹4,999</span>
+          <span>₹2,499</span>
+          <span className="text-[10px] font-normal text-white/70">· &lt;12h</span>
         </div>
       </div>
 

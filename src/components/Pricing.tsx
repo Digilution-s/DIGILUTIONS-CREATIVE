@@ -42,23 +42,30 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPlan, onOpenOrderModal
                     : 'border border-[#D4D4CD] hover:border-[#111111]'
                 }`}
               >
-                {/* Popular or Sprint Banner */}
-                {plan.badge && (
-                  <div className="flex items-center justify-between mb-3 sm:mb-4">
-                    <span
-                      className={`text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded border ${
-                        isFeatured
-                          ? 'bg-[#C7FF3D] text-[#111111] border-[#111111]'
-                          : 'bg-[#111111] text-white border-[#111111]'
-                      }`}
-                    >
-                      {plan.badge}
-                    </span>
-                    <span className="text-[11px] font-mono text-[#777770]">
+                {/* Popular or Sprint Banner + 50% Off Tag */}
+                <div className="flex items-center justify-between mb-3 sm:mb-4 gap-2">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    {plan.badge && (
+                      <span
+                        className={`text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded border ${
+                          isFeatured
+                            ? 'bg-[#C7FF3D] text-[#111111] border-[#111111]'
+                            : 'bg-[#111111] text-white border-[#111111]'
+                        }`}
+                      >
+                        {plan.badge}
+                      </span>
+                    )}
+                    <span className="text-[10px] sm:text-[11px] font-mono text-[#777770] hidden xs:inline">
                       {plan.deliveryTime}
                     </span>
                   </div>
-                )}
+
+                  {/* 50% off Pill Tag (Matching 2nd image) */}
+                  <span className="px-2.5 py-0.5 text-[11px] sm:text-xs font-bold text-[#6D28D9] bg-[#EDE9FE] border border-[#DDD6FE]/60 rounded-full shrink-0">
+                    50% off
+                  </span>
+                </div>
 
                 <div>
                   <h3 className="text-xl sm:text-2xl font-black text-[#111111] tracking-tight mb-1 sm:mb-2">
@@ -70,6 +77,14 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPlan, onOpenOrderModal
 
                   {/* Pricing Display */}
                   <div className="pb-4 sm:pb-6 mb-4 sm:mb-6 border-b border-[#E5E5DF]">
+                    {/* Strikethrough doubled price before discount */}
+                    <div className="flex items-center gap-2 mb-0.5">
+                      <span className="text-base sm:text-lg font-semibold text-[#777770] line-through tabular-nums decoration-[#777770]/80">
+                        {plan.originalPriceFormatted}
+                      </span>
+                    </div>
+
+                    {/* Main discounted price */}
                     <div className="flex items-baseline gap-2">
                       <span className="text-3xl sm:text-5xl font-black text-[#111111] tracking-tight tabular-nums">
                         {plan.priceFormatted}

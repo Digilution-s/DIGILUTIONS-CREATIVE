@@ -95,13 +95,23 @@ export const Hero: React.FC<HeroProps> = ({
                   </h2>
                 </div>
 
-                <div className="bg-[#C7FF3D] border border-[#111111] px-2.5 py-1 text-[10px] sm:text-xs font-mono font-bold text-[#111111] uppercase tracking-wider rounded">
-                  SAME-DAY
+                <div className="flex items-center gap-1.5">
+                  <div className="bg-[#C7FF3D] border border-[#111111] px-2.5 py-1 text-[10px] sm:text-xs font-mono font-bold text-[#111111] uppercase tracking-wider rounded">
+                    SAME-DAY
+                  </div>
+                  <span className="px-2 py-0.5 text-[11px] font-bold text-[#6D28D9] bg-[#EDE9FE] border border-[#DDD6FE]/60 rounded-full">
+                    50% off
+                  </span>
                 </div>
               </div>
 
               {/* Price & Delivery */}
               <div className="mb-4 sm:mb-6">
+                <div className="flex items-center gap-2 mb-0.5">
+                  <span className="text-base sm:text-lg font-semibold text-[#777770] line-through tabular-nums">
+                    ₹4,999
+                  </span>
+                </div>
                 <div className="flex items-baseline gap-2">
                   <span className="text-3xl sm:text-5xl font-black text-[#111111] tracking-tight tabular-nums">
                     ₹2,499

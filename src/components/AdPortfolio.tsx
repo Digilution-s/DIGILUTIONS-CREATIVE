@@ -108,20 +108,22 @@ export const AdPortfolio: React.FC<AdPortfolioProps> = ({ onOpenOrderModal, onSc
   // When activeAd changes, reset time and handle play
   useEffect(() => {
     setCurrentTime(0);
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0;
+    }
     const video = videoRef.current;
     if (video) {
       video.currentTime = 0;
-      video.load();
       if (isPlaying) {
-        video.play().catch(() => {
-          video.muted = true;
-          setIsMuted(true);
-          video.play().catch(() => {});
-        });
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            video.muted = true;
+            setIsMuted(true);
+            video.play().catch(() => {});
+          });
+        }
       }
-    }
-    if (audioRef.current) {
-      audioRef.current.currentTime = 0;
     }
   }, [activeAd.id]);
 
@@ -307,6 +309,7 @@ export const AdPortfolio: React.FC<AdPortfolioProps> = ({ onOpenOrderModal, onSc
                   key={activeAd.id}
                   ref={videoRef}
                   src={activeAd.videoUrl}
+                  poster={activeAd.posterUrl}
                   playsInline
                   loop
                   autoPlay
@@ -601,6 +604,7 @@ export const AdPortfolio: React.FC<AdPortfolioProps> = ({ onOpenOrderModal, onSc
                     <video
                       ref={(el) => { mobileVideoRefs.current[ad.id] = el; }}
                       src={ad.videoUrl}
+                      poster={ad.posterUrl}
                       playsInline
                       loop
                       autoPlay

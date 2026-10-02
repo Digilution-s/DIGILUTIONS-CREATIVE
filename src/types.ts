@@ -22,6 +22,7 @@ export interface VideoAdItem {
   bgGradient: string;
   avatarColor: string;
   videoUrl?: string;
+  posterUrl?: string;
 }
 
 export interface PricingPlan {
@@ -29,7 +30,10 @@ export interface PricingPlan {
   name: string;
   badge?: string;
   price: number;
+  originalPrice: number;
   priceFormatted: string;
+  originalPriceFormatted: string;
+  discountBadge?: string;
   deliveryTime: string;
   adCount: number;
   description: string;
