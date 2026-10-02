@@ -2,29 +2,29 @@ import { VideoAdItem, CreativeAngleDetail, PricingPlan } from '../types';
 
 export const VIDEO_ADS: VideoAdItem[] = [
   {
-    id: 'ad-skincare-serum',
-    title: 'D2C Skincare / Anti-Ageing Serum',
-    niche: 'Skincare & D2C',
-    angle: 'problem-solution',
-    angleLabel: 'Problem / Solution',
-    hookHeadline: '“Stop layering three different serums for youthful-looking skin.”',
-    roasMetric: '4.8x ROAS',
-    ctrMetric: '3.4% Outbound CTR',
-    durationSeconds: 29,
-    creatorName: 'Rhea M.',
-    creatorRole: 'Authentic UGC Creator · Pilgrim Skincare',
-    videoUrl: '/videos/skincare-anti-ageing.mp4',
-    posterUrl: '/videos/skincare-poster.jpg',
+    id: 'ad-coffee-starter-pack',
+    title: 'DEVAN’S Cold Brew Coffee Bags',
+    niche: 'Food & Beverage',
+    angle: 'irresistible-offer',
+    angleLabel: 'Irresistible Sprint Offer',
+    hookHeadline: '“Still paying ₹500 on Starbucks iced coffee every single day..? Watch this.”',
+    roasMetric: '4.6x ROAS',
+    ctrMetric: '4.4% Outbound CTR',
+    durationSeconds: 38,
+    creatorName: 'Mira S.',
+    creatorRole: 'Coffee & Lifestyle Creator · Goa',
+    videoUrl: '/videos/devans-cold-brew.mp4',
+    posterUrl: '/videos/devans-coffee-poster.jpg',
     subtitles: [
-      { time: 0, text: 'Stop layering three different serums for youthful looking skin.' },
-      { time: 4, text: 'I was using retinol for fine lines, hyaluronic acid for hydration, and another serum for that healthy glow.' },
-      { time: 10, text: 'This one combines Retinol, which targets signs of ageing, Hyaluronic Acid for moisture, and Pomegranate for elasticity—all in a single lightweight formula.' },
-      { time: 20, text: 'It’s instantly absorbed and gives your skin a dewy finish.' },
-      { time: 26, text: 'Tap the link to get 20% off your first bottle.' }
+      { time: 0, text: '“Still paying ₹500 on Starbucks iced coffee every single day..? Watch this.”' },
+      { time: 3, text: '“These are DEVAN’S Cold Brew Coffee Bags, made with pure single-origin Indian Arabica, medium roasted.”' },
+      { time: 10, text: '“Just drop one bag into up to a litre of cold water, let it brew for 15 to 18 hours, and refrigerate.”' },
+      { time: 18, text: '“You get a smoother, more chocolaty, less acidic cold brew—ready for ice, milk or sugar.”' },
+      { time: 24, text: '“Up to five litres of smooth cold brew. Make your coffee taste like cafe with DEVAN’S Original.”' }
     ],
-    scriptSummary: '5-beat DTC performance script: pattern interrupts complex multi-serum routines, proves 3-in-1 formulation benefit, demonstrates dewy skin finish, and closes with a 20% off launch sprint offer.',
-    bgGradient: 'from-[#1A1A18] via-[#242420] to-[#121211]',
-    avatarColor: '#E8D5B5'
+    scriptSummary: '5-beat performance UGC script: price-anchors against ₹500 daily Starbucks iced coffee, introduces DEVAN’S single-origin Indian Arabica medium roast bags, demonstrates 15–18h overnight cold brewing, highlights smooth low-acid chocolatey flavor, and drives 5-litre bulk cafe taste trial CTA.',
+    bgGradient: 'from-[#211E1A] via-[#2B2720] to-[#151310]',
+    avatarColor: '#D7CCC8'
   },
   {
     id: 'ad-tech-anc-headphones',
@@ -78,14 +78,14 @@ export const VIDEO_ADS: VideoAdItem[] = [
   },
   {
     id: 'ad-apparel-heavyweight-tee',
-    title: 'DTC Apparel / Oversized Matcha Tee — Final Master Script',
+    title: 'DTC Apparel / Oversized Matcha Tee',
     niche: 'Fashion & Lifestyle',
     angle: 'objection-buster',
     angleLabel: 'Objection Buster',
     hookHeadline: '“People always say oversized T-shirts look messy if you’re under 5\'8.”',
     roasMetric: '4.7x ROAS',
     ctrMetric: '3.8% Outbound CTR',
-    durationSeconds: 29,
+    durationSeconds: 30,
     creatorName: 'Sneha & Dev',
     creatorRole: 'Style Creators · Pune',
     videoUrl: '/videos/matcha-oversized-tee.mp4',
@@ -104,27 +104,29 @@ export const VIDEO_ADS: VideoAdItem[] = [
     avatarColor: '#88B04B'
   },
   {
-    id: 'ad-coffee-starter-pack',
-    title: 'Artisanal Beverage / Cold Brew Brew-Bags',
-    niche: 'Food & Beverage',
-    angle: 'irresistible-offer',
-    angleLabel: 'Irresistible Sprint Offer',
-    hookHeadline: '“They are giving away a free glass tumbler with 10 cold brew packs.”',
-    roasMetric: '4.6x ROAS',
-    ctrMetric: '4.4% Outbound CTR',
-    durationSeconds: 21,
-    creatorName: 'Mira S.',
-    creatorRole: 'Food & Lifestyle Creator · Goa',
+    id: 'ad-skincare-serum',
+    title: 'D2C Skincare / Anti-Ageing Serum',
+    niche: 'Skincare & D2C',
+    angle: 'problem-solution',
+    angleLabel: 'Problem / Solution',
+    hookHeadline: '“Stop layering three different serums for youthful-looking skin.”',
+    roasMetric: '4.8x ROAS',
+    ctrMetric: '3.4% Outbound CTR',
+    durationSeconds: 29,
+    creatorName: 'Rhea M.',
+    creatorRole: 'Authentic UGC Creator · Pilgrim Skincare',
+    videoUrl: '/videos/skincare-anti-ageing.mp4',
+    posterUrl: '/videos/skincare-poster.jpg',
     subtitles: [
-      { time: 0, text: 'If you spend ₹300 on Starbucks iced Americanos every single day...' },
-      { time: 4, text: 'You need to see this secret flash bundle before midnight.' },
-      { time: 9, text: 'Steep this filter bag overnight in cold water. Wake up to barista nitro cold brew.' },
-      { time: 15, text: 'Costs ₹35 per glass, and you get the double-walled glass tumbler free.' },
-      { time: 19, text: 'Only 150 kits left in stock. Tap below.' }
+      { time: 0, text: 'Stop layering three different serums for youthful looking skin.' },
+      { time: 4, text: 'I was using retinol for fine lines, hyaluronic acid for hydration, and another serum for that healthy glow.' },
+      { time: 10, text: 'This one combines Retinol, which targets signs of ageing, Hyaluronic Acid for moisture, and Pomegranate for elasticity—all in a single lightweight formula.' },
+      { time: 20, text: 'It’s instantly absorbed and gives your skin a dewy finish.' },
+      { time: 26, text: 'Tap the link to get 20% off your first bottle.' }
     ],
-    scriptSummary: 'Price-anchoring against daily coffee purchases with high-urgency gift-with-purchase bundle.',
-    bgGradient: 'from-[#211E1A] via-[#2B2720] to-[#151310]',
-    avatarColor: '#D7CCC8'
+    scriptSummary: '5-beat DTC performance script: pattern interrupts complex multi-serum routines, proves 3-in-1 formulation benefit, demonstrates dewy skin finish, and closes with a 20% off launch sprint offer.',
+    bgGradient: 'from-[#1A1A18] via-[#242420] to-[#121211]',
+    avatarColor: '#E8D5B5'
   }
 ];
 

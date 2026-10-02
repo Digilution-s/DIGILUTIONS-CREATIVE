@@ -36,7 +36,7 @@ export const AdPortfolio: React.FC<AdPortfolioProps> = ({ onOpenOrderModal, onSc
   const videoRef = useRef<HTMLVideoElement>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const niches = ['All', 'Skincare & D2C', 'Consumer Tech', 'Health & Fitness', 'Fashion & Lifestyle', 'Food & Beverage'];
+  const niches = ['All', 'Food & Beverage', 'Consumer Tech', 'Health & Fitness', 'Fashion & Lifestyle', 'Skincare & D2C'];
 
   const filteredAds = selectedNiche === 'All' 
     ? VIDEO_ADS 
@@ -150,12 +150,6 @@ export const AdPortfolio: React.FC<AdPortfolioProps> = ({ onOpenOrderModal, onSc
     }
   };
 
-  // Find current subtitle based on timestamp
-  const currentSubtitle = activeAd.subtitles
-    .slice()
-    .reverse()
-    .find(s => currentTime >= s.time)?.text || activeAd.subtitles[0].text;
-
   // Labeled beat tags for Skincare, CMF headphones, and OPN electrolytes ads
   const getBeatLabel = (idx: number, adId: string) => {
     if (adId === 'ad-skincare-serum') {
@@ -179,6 +173,16 @@ export const AdPortfolio: React.FC<AdPortfolioProps> = ({ onOpenOrderModal, onSc
         '20–23s Fabric Feel',
         '23–25s Personal Proof',
         '25–29s CTA'
+      ];
+      return labels[idx] || `${activeAd.subtitles[idx].time}s`;
+    }
+    if (adId === 'ad-coffee-starter-pack') {
+      const labels = [
+        '0–3s Hook',
+        '3–10s Product Reveal',
+        '10–18s How It Works',
+        '18–24s Taste Payoff',
+        '24–32s CTA'
       ];
       return labels[idx] || `${activeAd.subtitles[idx].time}s`;
     }
@@ -410,19 +414,11 @@ export const AdPortfolio: React.FC<AdPortfolioProps> = ({ onOpenOrderModal, onSc
                 )}
               </div>
 
-              {/* Dynamic Retention Subtitle Box (Alex Hormozi / TikTok Style) */}
-              <div className="relative z-10 space-y-2.5 pb-0.5">
-                <div className="bg-black/85 backdrop-blur-md border border-white/15 rounded-lg p-2.5 sm:p-3 text-center shadow-lg">
-                  <div className="text-[9px] font-mono text-[#C7FF3D] uppercase tracking-wider mb-0.5 flex items-center justify-center gap-1.5">
-                    <span>LIVE HOOK & SCRIPT</span>
-                    <span>·</span>
-                    <span>{Math.floor(currentTime)}s / {activeAd.durationSeconds}s</span>
-                  </div>
-                  <div className="text-xs sm:text-sm font-black text-white leading-snug tracking-wide">
-                    {currentSubtitle}
-                  </div>
-                </div>
+              {/* Bottom gradient overlay for controls legibility */}
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none z-[5]" />
 
+              {/* Dynamic Video Controls & Scrubber Footer */}
+              <div className="relative z-10 space-y-2.5 pb-0.5 mt-auto">
                 {/* Progress bar scrubber */}
                 <div 
                   className="w-full bg-white/20 h-1.5 rounded-full overflow-hidden relative cursor-pointer"
@@ -703,21 +699,11 @@ export const AdPortfolio: React.FC<AdPortfolioProps> = ({ onOpenOrderModal, onSc
                     </div>
                   )}
 
-                  {/* Bottom Hormozi-style Dynamic Subtitle & Action */}
-                  <div className="relative z-10 space-y-2 mt-auto">
-                    <div className="bg-black/85 backdrop-blur-md border border-white/15 rounded-lg p-2.5 text-center shadow-lg">
-                      <div className="text-[8px] font-mono text-[#C7FF3D] uppercase tracking-wider mb-0.5 flex items-center justify-center gap-1">
-                        <span>{ad.angleLabel}</span>
-                        <span>·</span>
-                        <span>{ad.roasMetric}</span>
-                      </div>
-                      <div className="text-[11px] font-black text-white leading-snug tracking-wide line-clamp-2">
-                        {isActiveSlide && hasVideo
-                          ? (ad.subtitles.slice().reverse().find(s => mobileCurrentTime >= s.time)?.text || ad.subtitles[0].text)
-                          : ad.subtitles[0].text}
-                      </div>
-                    </div>
+                  {/* Bottom gradient overlay for controls legibility */}
+                  <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none z-[5]" />
 
+                  {/* Bottom Action & Progress Bar */}
+                  <div className="relative z-10 space-y-2 mt-auto">
                     {/* Progress Bar */}
                     <div className="w-full bg-white/20 h-1 rounded-full overflow-hidden">
                       <div 
